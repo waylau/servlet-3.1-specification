@@ -9,7 +9,7 @@ This is the summary of my book.
 	* [一个例子](docs/Overview/1.3 An Example.md)
 	* [Servlet 与其他技术的对比](docs/Overview/1.4 Comparing Servlets with Other Technologies.md) 
 	* [与 Java EE 的关系](docs/Overview/1.5 Relationship to Java Platform, Enterprise Edition.md) 
-	* [Servlet 规范的兼容性](docs/Overview/1.6 Compatibility with Java Servlet Specification Version.md) 
+	* [与 Servlet 2.5 规范的兼容性](docs/Overview/1.6 Compatibility with Java Servlet Specification Version.md) 
 * [Servlet 接口](docs/The Servlet Interface/2. The Servlet Interface.md) 
 	* [请求处理方法](docs/The Servlet Interface/2.1 Request Handling Methods.md) 
 	* [实例数量](docs/The Servlet Interface/2.2 Number of Instances.md) 
