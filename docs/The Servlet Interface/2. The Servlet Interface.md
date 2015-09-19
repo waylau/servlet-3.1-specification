@@ -1,0 +1,4 @@
+Servlet 接口
+====
+
+Servlet 接口是 Java Servlet API 的核心抽象。所有 Servlet 类必须直接或间接的实现该接口，或者更通常做法是通过继承一个实现了该接口的类从而复用许多共性功能。目前有 GenericServlet 和 HttpServlet这两个类实现了 Servlet 接口。大多数情况下，开发者只需要继承HttpServlet 去实现自己的 Servlet 即可。

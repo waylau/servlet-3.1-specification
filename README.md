@@ -18,7 +18,7 @@ The intended audience for this specification includes the following groups:
 
 该规范不是 servlet 开发人的用户指南，而且也并不打算被用作这样。用于此目的参考文献可以到<http://java.sun.com/products/servlet>查找。
 
-本书利用业余时间编写,由于时间紧凑,精力和能力有限,书中未免有纰漏和错误,望读者能够热忱斧正，[点此](https://github.com/waylau/servlet-3.1-specification/issues)提问。如有兴趣，也可以参与到本翻译工作中来 :)
+本书利用业余时间编写，由于时间紧凑，精力和能力有限，书中未免有纰漏和错误，望读者能够热忱斧正，[点此](https://github.com/waylau/servlet-3.1-specification/issues)提问。如有兴趣，也可以参与到本翻译工作中来 :)
 
 另外有 GitBook 的版本方便阅读 <http://waylau.gitbooks.io/servlet-3-1-specification>。
 
