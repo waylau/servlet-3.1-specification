@@ -70,7 +70,10 @@ RFC 在线版本请访问：<http://wwww.ietf.org/rfc/>。
 <http://www.xml.org/>
 
 ## 提供反馈
+
 我们欢迎大家提供此规范的任意和所有的反馈。请发送你的建议到users@servlet-spec.java.net 邮箱。
+
+(**译者注：**对本翻译有任何意见，可在 <https://github.com/waylau/servlet-3.1-specification/issues>提问。）
 
 请注意，由于我们收到大量的反馈意见，你可能不能正常收到来自工程师的回复。尽管如此，规范团队会阅读、评估、存档每一个建议。
 

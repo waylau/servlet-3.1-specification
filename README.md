@@ -10,8 +10,6 @@ The intended audience for this specification includes the following groups:
 
 本书是《Java Servlet 3.1 规范》的中文翻译，同时提供了大量 Servlet 3.1 实例，帮助你快速理解 Servlet 3.1 规范。至今为止，Servlet 3.1 是最新的正式版本，[Servlet 4.0](https://jcp.org/en/jsr/detail?id=369) 仍在草案阶段。
 
-## 谁应该读此规范
-
 本规范的目标读者有如下几种：
 
 * Web 服务器和应用服务器供应商，用于开发符合此标准的 servlet 引擎。
