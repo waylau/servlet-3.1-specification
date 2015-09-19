@@ -1,0 +1,11 @@
+Servlet 与其他技术的对比
+====
+
+从功能上看，servlet 位于Common Gateway Interface（公共网关接口，简称 CGI）程序和私有的服务器扩展如 Netscape Server API（NSAPI）或 Apache Modules 这两者之间。
+
+相对于其他服务器扩展机制 Servlet 有如下优势：
+
+* 它们通常比 CGI 脚本更快，因为采用不同的处理模型。
+* 它们采用标准的 API 从而支持更多的Web 服务器。
+* 它们拥有 Java 编程语言的所有优势，包括容易开发和平台无关。
+* 它们可以访问 Java 平台提供的大量的 API。
