@@ -1,0 +1,12 @@
+什么是 Servlet 容器
+====
+
+Servlet Container（Servlet 容器） 是 Web 服务器或者应用服务器的一部分，用于提供基于请求/响应发送模式的网络服务，解码基于 MIME 的请求，并且格式化基于 MIME 的响应。Servlet 容器同时也包含和管理他们的生命周期里 Servlet。
+
+Servlet 容器可以嵌入到宿主的 Web 服务器中，或者通过 Web 服务器的本地扩展 API 单独作为附加组件安装。Servelt 容器也可能内嵌或安装到启用 Web 功能的应用服务器中。
+
+所有的 Servlet 容器必须支持 HTTP 协议用于请求和响应，但额外的基于 请求/响应 的协议，如 HTTPS (HTTP over SSL)的支持是可选的。对于 HTTP 规范需要版本，容器必须支持 HTTP/1.0 和 HTTP/1.1。因为容器或许支持 RFC2616 (HTTP/1.1)描述的缓存机制，缓存机制可能在将客户端请求交给 Servlet 处理之前修改它们，也可能在将 Servlet 生成的响应发送给客户端之前修改它们，或者可能根据 RFC2616 规范直接对请求作出响应而不交给 Servlet 进行处理。
+
+Servlet 容器应该使 Servlet 执行在一个安全限制的环境中。在 Java 平台标准版（J2SE, v.1.3 或更高） 或者 Java平台企业版(Java EE, v.1.3 或更高) 的环境下，这些限制应该被放置在 Java 平台定义的安全许可架构中。比如，高端的应用服务器为了保证容器的其他组件不受到负面影响可能会限制 Thread 对象的创建。
+
+Java SE 7 是构建 Servlet 容器最低的 Java平 台版本。
