@@ -1,0 +1,9 @@
+初始化参数
+====
+
+如下 ServletContext 接口方法允许 servlet 访问由应用开发人员在Web 应用中的部署描述符中指定的上下文初始化参数：
+
+* getInitParameter
+* getInitParameterNames
+
+应用开发人员使用初始化参数来表达配置信息。代表性的例子是一个网络管理员的 e-mail 地址，或保存关键数据的系统名称。
