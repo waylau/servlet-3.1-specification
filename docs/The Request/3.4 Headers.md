@@ -1,0 +1,16 @@
+头
+====
+
+通过下面的 HttpServletRequest 接口方法，servlet 可以访问 HTTP 请求的头信息：
+
+* getHeader
+* getHeaders
+* getHeaderNames
+
+getHeader 方法返回给定头名称的头。多个头可以具有相同的名称，例如HTTP 请求中的 Cache-Control 头。如果多个头的名称相同，getHeader方法返回请求中的第一个头。 getHeaders 方法允许访问所有与特定头名称相关的头值，返回一个 String 对象的 Enumeration（枚举）。
+头可包含由 String 形式的 int 或 Date 数据。HttpServletRequest接口提供如下方便的方法访问这些类型的头数据：
+
+* getIntHeader
+* getDateHeader
+
+如果 getIntHeader 方法不能转换为 int 的头值，则抛出NumberFormatException 异常。如果 getDateHeader 方法不能把头转换成一个 Date 对象，则抛出 IllegalArgumentException 异常。
