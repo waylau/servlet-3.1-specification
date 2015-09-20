@@ -1,0 +1,20 @@
+非阻塞 IO
+====
+
+Web 容器中的非阻塞请求处理有助于提高对改善 Web 容器可扩展性不断增加的需求，增加 Web 容器可同时处理请求的连接数量。servlet 容器的非阻塞 IO 允许开发人员在数据可用时读取数据或在数据可写时写数据。非阻塞 IO 仅对在 Servlet 和 Filter（2.3.3.3节定义的，“异步处理”）中的异步请求处理和升级处理（2.3.3.5节定义的，“升级处理”）有效。否则，当调用 ServletInputStream.setReadListener 或ServletOutputStream.setWriteListener 方法时将抛出IllegalStateException。
+
+ReadListener 为非阻塞IO提供了下面的回调方法：
+
+* ReadListener
+  * onDataAvailable().当可以从传入的请求流中读取数据时ReadListener 的 onDataAvailable 方法被调用。当数据可读时容器初次调用该方法。当且仅当下面描述的 ServletInputStream 的isReady 方法返回 false，容器随后将调用 onDataAvailable 方法。
+  * onAllDataRead().当读取完注册了此监听器的 ServletRequest 的所有数据时调用 onAllDataRead 方法。
+  * onError(Throwable t). 处理请求时如果有任何错误或异常发生时调用 onError 方法。
+  
+容器必须线程安全的访问 ReadListener 中的方法。
+
+除了上述 ReadListener 定义的方法外，下列方法已被添加到ServletInputStream 类中：
+
+* ServletInputStream
+  * boolean isFinished(). ServletInputStream 相关的请求的所有数据已经读取完时 isFinished 方法返回 true。否则返回 false。
+  * boolean isReady().如果可以无阻塞地读取数据 isReady 方法返回 true。如果没有数据可以无阻塞地读取该方法返回 false。如果isReady 方法返回 false，调用 read 方法是非法的，且必须抛出IllegalStateException。
+  * void setReadListener(ReadListener listener). 设置上述定义的 ReadListener，调用它以非阻塞的方式读取数据。一旦把监听器与给定的 ServletInputStream 关联起来，当数据可以读取，所有的数据都读取完或如果处理请求时发生错误，容器调用 ReadListener 的方法。注册一个 ReadListener 将启动非阻塞 IO。在那时切换到传统的阻塞IO是非法的，且必须抛出 IllegalStateException。在当前请求范围内，随后调用 setReadListener 是非法的且必须抛出IllegalStateException。
