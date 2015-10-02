@@ -1,0 +1,6 @@
+使用请求调度器
+====
+
+要使用请求调度器，servlet 可调用 RequestDispatcher 接口的include 或 forward 方法。这些方法的参数既可以是javax.servlet.Servlet 接口的 service 方法传来的请求和响应对象实例，也可以是本规范的2.3版本中介绍的请求和响应包装器类的子类对象实例。对于后者，包装器实例必须包装容器传递到 service 方法中的请求和响应对象。
+
+容器提供者应该保证分发到目标 servlet 的请求作为原始请求发生在的同一个 JVM 的同一个线程中。
