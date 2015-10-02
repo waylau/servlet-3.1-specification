@@ -1,0 +1,24 @@
+缓冲
+====
+
+出于性能的考虑，servlet 容器允许（但不要求）缓存输出到客户端的内容。一般的，服务器是默认执行缓存，但应该允许 servlet 来指定缓存参数。
+
+下面是 ServletResponse 接口允许 servlet 来访问和设置缓存信息的方法：
+
+* getBufferSize
+* setBufferSize
+* isCommitted
+* reset
+* resetBuffer
+* flushBuffer
+
+不管 servlet 使用的是一个 ServletOutputStream 还是一个 Writer，ServletResponse 接口提供的这些方法允许执行缓冲操作。
+getBufferSize 方法返回使用的底层缓冲区大小。如果没有使用缓冲，该方法必须返回一个 int 值 0。
+Servlet 可以请求 setBufferSize 方法设置一个最佳的缓冲大小。不一定分配 servlet 请求大小的缓冲区，但至少与请求的大小一样大。这允许容器重用一组固定大小的缓冲区，如果合适，可以提供一个比请求时更大的缓冲区。该方法必须在使用 ServletOutputStream 或 Writer 写任何内容之前调用。如果已经写了内容或响应对象已经提交，则该方法必须抛出IllegalStateException。
+
+isCommitted 方法返回一个表示是否有任何响应字节已经返回到客户端的boolean 值。flushBuffer 方法强制刷出缓冲区的内容到客户端。
+当响应没有提交时，reset方法清空缓冲区的数据。头信息，状态码和在调用 reset 之前 servlet 调用 getWriter 或 getOutputStream 设置的状态也必须被清空。如果响应没有被提交，resetBuffer 方法将清空缓冲区中的内容，但不清空请求头和状态码。
+
+如果响应已经提交并且 reset 或 resetBuffer 方法已被调用，则必须抛出 IllegalStateException，响应及它关联的缓冲区将保持不变。
+
+当使用缓冲区时，容器必须立即刷出填满的缓冲区内容到客户端。如果这是最早发送到客户端的数据，且认为响应被提交了。
