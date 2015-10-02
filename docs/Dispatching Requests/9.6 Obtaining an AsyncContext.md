@@ -1,0 +1,4 @@
+获取 AsyncContext
+====
+
+实现了 AsyncContext 接口的对象可从 ServletRequest 的一个startAsync 方法中获得，一旦有了 AsyncContext 对象，你就能够使用它的 complete() 方法来完成请求处理，或使用下面描述的转发方法。
