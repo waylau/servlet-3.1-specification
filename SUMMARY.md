@@ -47,7 +47,7 @@ This is the summary of my book.
 * [过滤](docs/Filtering/6. Filtering.md) 
 	* [什么是过滤器](docs/Filtering/6.1 What is a filter.md)
 	* [主要概念](docs/Filtering/6.2 Main Concepts.md) 
-* [会话跟踪机制](docs/Sessions/7. Sessions.md)
+* [会话](docs/Sessions/7. Sessions.md)
 	* [会话跟踪机制](docs/Sessions/7.1 Session Tracking Mechanisms.md) 
 	* [创建会话](docs/Sessions/7.2 Creating a Session.md) 
 	* [会话范围](docs/Sessions/7.3 Session Scope.md) 
