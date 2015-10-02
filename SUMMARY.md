@@ -52,7 +52,7 @@ This is the summary of my book.
 	* [创建会话](docs/Sessions/7.2 Creating a Session.md) 
 	* [会话范围](docs/Sessions/7.3 Session Scope.md) 
 	* [绑定属性到会话](docs/Sessions/7.4 Binding Attributes into a Session.md) 
-	* [会话过期](docs/Sessions/7.5 Session Timeouts.md) 
+	* [会话超时](docs/Sessions/7.5 Session Timeouts.md) 
 	* [最后访问时间](docs/Sessions/7.6 Last Accessed Times.md) 
 	* [重要会话语义](docs/Sessions/7.7 Important Session Semantics.md) 
 * [注解和可插拔性](docs/Annotations and pluggability/8. Annotations and pluggability.md) 
