@@ -96,7 +96,7 @@ This is the summary of my book.
 	* [映射规范](docs/Mapping Requests to Servlets/12.2 Specification of Mappings.md) 
 * [安全](docs/Security/13. Security.md) 
 	* [介绍](docs/Security/13.1 Introduction.md) 
-	* [声明式](docs/Security/13.2 Declarative Security.md) 
+	* [声明式安全](docs/Security/13.2 Declarative Security.md) 
 	* [编程式安全](docs/Security/13.3 Programmatic Security.md) 
 	* [编程式安全策略配置](docs/Security/13.4 Programmatic Security Policy Configuration.md) 
 	* [角色](docs/Security/13.5 Roles.md) 
