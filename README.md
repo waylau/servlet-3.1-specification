@@ -26,7 +26,7 @@ The intended audience for this specification includes the following groups:
 
 从[目录](SUMMARY.md)开始阅读吧！
 
-###Contact 联系作者:
+### Contact 联系作者:
 
 * Blog:[www.waylau.com](http://www.waylau.com)
 * Gmail: [waylau521@gmail.com](mailto:waylau521@gmail.com)
